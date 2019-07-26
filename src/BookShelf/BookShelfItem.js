@@ -1,5 +1,6 @@
 import React from 'react'
 import BookDetailButton from './BookDetailButton'
+import books from './../Assets/Images/js_book.jpg'
 import iconDropDownGreen from '../Assets/Images/drop-down-arrow-green.png'
 //import * as utils from '../../utils/Common'
 
@@ -44,10 +45,13 @@ class BookShelfItem extends React.Component {
     return (
       <div className="book">
         <div style={{width: "min-content"}}>
-          <div className="book-image-container" style={{display:"flex"}}>
-              <img className="book-card-image" alt='book image' src={book}/>
+          <div className="book-image-container">
+              <img className="book-card-image" alt='book image' src={books}/>
+              <BookDetailButton/>
           </div>
-          <BookDetailButton/>
+          <div className="book-title">{this.props.title}ABCD</div>
+          <div className="book-authors">{this.props.authors}EFGH</div>
+          
         </div>
       </div>
     )

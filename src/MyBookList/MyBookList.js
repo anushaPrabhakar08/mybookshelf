@@ -17,14 +17,14 @@ class MyBookList extends React.Component {
                               updateShelf={props.initShelves}
                               bookList={props.currentlyReading}
                               title="Currently Reading"/>
-          {/* <BookShelfContainer myBooks={props.myBooks}
+         <BookShelfContainer myBooks={props.myBooks}
                               updateShelf={props.initShelves}
                               bookList={props.wantToRead}
                               title="Want To Read"/>
           <BookShelfContainer myBooks={props.myBooks}
                               updateShelf={props.initShelves}
                               bookList={props.read}
-                              title="Read Done"/> */}
+                              title="Read Done"/> 
         </div>
         <div className="open-search">
           <Link
