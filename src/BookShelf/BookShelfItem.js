@@ -1,5 +1,6 @@
 import React from 'react'
 import BookDetailButton from './BookDetailButton'
+import iconDropDownGreen from '../Assets/Images/drop-down-arrow-green.png'
 //import * as utils from '../../utils/Common'
 
 class BookShelfItem extends React.Component {
@@ -19,16 +20,16 @@ class BookShelfItem extends React.Component {
   }
 
   inMyBookList = () => {
-    const myBooks = this.props.myBooks
-    const bookID = this.props.id
-    const isInMyShelf = myBooks.filter(e => e.id === bookID)
-    if (isInMyShelf.length > 0) {
-      this.setState({shelfTitle: isInMyShelf[0].shelf})
-    }
+    // const myBooks = this.props.myBooks
+    // const bookID = this.props.id
+    // const isInMyShelf = myBooks.filter(e => e.id === bookID)
+    // if (isInMyShelf.length > 0) {
+    //   this.setState({shelfTitle: isInMyShelf[0].shelf})
+    // }
   }
 
   componentDidMount() {
-    this.inMyBookList()
+    // this.inMyBookList()
   }
 
   render() {    
@@ -42,17 +43,12 @@ class BookShelfItem extends React.Component {
 
     return (
       <div className="book">
-        <div className="book-top">
-          <div className="book-cover" style={coverStyle}></div>
-          <BookDetailButton
-            shelf={this.state.shelfTitle}
-            updateShelf={this.props.updateShelf}
-            book={book}
-            bookID={bookID}
-          />
+        <div style={{width: "min-content"}}>
+          <div className="book-image-container" style={{display:"flex"}}>
+              <img className="book-card-image" alt='book image' src={book}/>
+          </div>
+          <BookDetailButton/>
         </div>
-        <div className="book-title">{this.props.title}</div>
-        <div className="book-authors">{this.props.authors}</div>
       </div>
     )
   }

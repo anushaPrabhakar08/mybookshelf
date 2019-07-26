@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css'
 //import * as BooksAPI from '../../utils/BooksAPI'
 
 class BookDetailButton extends React.Component {
@@ -15,6 +16,7 @@ class BookDetailButton extends React.Component {
   }
 
   handleChange = (event) => {
+    console.log("alert !!!!!!!!!!!!!!!!")
     this.setState({value: event.target.value}, () => {
       this.moveToBookShelf()
     })
